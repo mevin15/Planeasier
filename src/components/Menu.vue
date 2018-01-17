@@ -13,10 +13,11 @@
       </q-btn>
 
       <q-toolbar-title>
+  
         PlanEasier
-        <div slot="subtitle">Subtitle</div>
+        <div slot="subtitle">Everything is possible</div>
       </q-toolbar-title>
-      <router-link to="/login"><p style="color:white;">Log out</p></router-link>
+      <router-link to="/login"><p class="caption" style="color:white;"><small>Log out</small></p></router-link>
     </q-toolbar>
 
     <div slot="left">

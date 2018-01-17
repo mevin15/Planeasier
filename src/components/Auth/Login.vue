@@ -1,35 +1,40 @@
 <template>
-  <div>
-    <q-card inline>
-      <q-card-title>
+  <div class="row justify-center">
+    <q-card inline style="margin: 30px;">
+      <q-card-title class="text-tertiary">
         Log in
       </q-card-title>
       <q-card-separator />
       <q-card-main>
-        <q-field
-          icon="perm identity"
-          label="Username"
-        >
-          <q-input v-model="login" />
-        </q-field>
-        <q-field
-          icon="lock"
-          label="Password"
-        >
-          <q-input 
-            type="password"
-            v-model="password"
-          />
-        </q-field>
-        <div>{{errorMessage}}</div>
-        <q-btn 
-          icon="done"
-          color="primary"
-          @click="submit">
-          Log in 
-        </q-btn>
-        <router-link to="/forgetPassword">I forgot my password</router-link>
-        <router-link to="/register">Register</router-link>
+        <div class="column xs-gutter">
+          <q-field
+            icon="perm identity"
+            label="Username"
+          >
+            <q-input v-model="login" />
+          </q-field>
+          <q-field
+            icon="lock"
+            label="Password"
+          >
+            <q-input 
+              type="password"
+              v-model="password"
+            />
+          </q-field>
+          <div><small class="text-negative">{{errorMessage}}</small></div>
+          <br/>
+          <q-btn 
+            icon="done"
+            color="primary"
+            @click="submit">
+            Log in 
+          </q-btn>
+          <br/>
+          <router-link to="/forgetPassword" class="text-italic text-tertiary">I forgot my password</router-link>
+          <br/>
+          <router-link to="/register" class ="text-tertiary">Register</router-link>
+        </div>
       </q-card-main>
     </q-card>
   </div>
