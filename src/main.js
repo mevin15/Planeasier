@@ -15,6 +15,7 @@ import Quasar from 'quasar'
 import router from './router'
 import Vuelidate from 'vuelidate'
 
+require('./themes/app.mat.styl')
 Vue.config.productionTip = false
 Vue.use(Quasar) // Install Quasar Framework
 Vue.use(Vuelidate)
