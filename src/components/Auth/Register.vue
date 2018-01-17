@@ -1,83 +1,88 @@
 <template>
-  <div>
-    <q-card inline>
-      <q-card-title>
+  <div class="row justify-center">
+    <q-card inline style="margin: 30px;">
+      <q-card-title class="text-tertiary">
         Register
       </q-card-title>
       <q-card-separator />
       <q-card-main>
-        <q-field
-          icon="perm identity"
-          label="Username"
-          helper="Choose an username"
-        >
-          <q-input 
-            v-model="login"
-            @blur="$v.login.$touch"
-            :error="$v.login.$error"
+        <div class="column xs-gutter">
+          <q-field
+            icon="perm identity"
+            label="Username"
+            helper="Choose an username"
+          >
+            <q-input 
+              v-model="login"
+              @blur="$v.login.$touch"
+              :error="$v.login.$error"
+              />
+          </q-field>
+          <q-field
+            icon="mail"
+            label="E-mail address"
+            helper="Enter your e-mail address"
+          >
+            <q-input 
+              type="email"
+              v-model="email"
+              @blur="$v.email.$touch"
+              :error="$v.email.$error"
             />
-        </q-field>
-        <q-field
-          icon="mail"
-          label="E-mail address"
-          helper="Enter your e-mail address"
-        >
-          <q-input 
-            type="email"
-            v-model="email"
-            @blur="$v.email.$touch"
-            :error="$v.email.$error"
-          />
-        </q-field>
-        <q-field
-          icon="check"
-          label="Confirm e-mail address"
-          helper="Confirm your e-mail address"
-        >
-          <q-input 
-            type="email"
-            v-model="checkedEmail"
-            @blur="$v.checkedEmail.$touch"
-            :error="$v.checkedEmail.$error"
-          />
-        </q-field>
-        <q-field
-          icon="lock"
-          label="Password"
-          helper="Choose a password"
-        >
-          <q-input 
-            type="password"
-            v-model="password"
-            @blur="$v.password.$touch"
-            :error="$v.password.$error"
-          />
-        </q-field>
-        <q-field
-          icon="check"
-          label="Confirm Password"
-          helper="Confirm your password"
-        >
-          <q-input 
-            type="password"
-            v-model="checkedPassword"
-            @blur="$v.checkedPassword.$touch"
-            :error="$v.checkedPassword.$error"
-          />
-        </q-field>
-        <div>{{errorMessage}}</div>
-        <q-btn 
-          icon="done"
-          color="primary"
-          @click="submit">
-          Register 
-        </q-btn>
-        <q-btn 
-          icon="cancel"
-          color="secondary"
-          @click="$router.push('/login')">
-          Cancel 
-        </q-btn>
+          </q-field>
+          <q-field
+            icon="check"
+            label="Confirm e-mail address"
+            helper="Confirm your e-mail address"
+          >
+            <q-input 
+              type="email"
+              v-model="checkedEmail"
+              @blur="$v.checkedEmail.$touch"
+              :error="$v.checkedEmail.$error"
+            />
+          </q-field>
+          <q-field
+            icon="lock"
+            label="Password"
+            helper="Choose a password"
+          >
+            <q-input 
+              type="password"
+              v-model="password"
+              @blur="$v.password.$touch"
+              :error="$v.password.$error"
+            />
+          </q-field>
+          <q-field
+            icon="check"
+            label="Confirm Password"
+            helper="Confirm your password"
+          >
+            <q-input 
+              type="password"
+              v-model="checkedPassword"
+              @blur="$v.checkedPassword.$touch"
+              :error="$v.checkedPassword.$error"
+            />
+          </q-field>
+          <div><small class="text-negative">{{errorMessage}}</small></div>
+          <br/>
+          <div class="row justify-around">
+            <q-btn 
+              icon="done"
+              color="primary"
+              @click="submit">
+              Register 
+            </q-btn>
+            <q-btn 
+              icon="cancel"
+              color="secondary"
+              @click="$router.push('/login')">
+              Cancel 
+            </q-btn>
+          </div>
+        </div>
       </q-card-main>
     </q-card>
   </div>
