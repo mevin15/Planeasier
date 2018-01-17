@@ -1,7 +1,7 @@
 <template>
   <div class="row justify-center">
     <q-card inline style="margin: 30px;">
-      <q-card-title>
+      <q-card-title class="text-tertiary">
         Reset Password
       </q-card-title>
       <q-card-separator />
