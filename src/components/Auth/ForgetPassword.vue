@@ -1,27 +1,38 @@
 <template>
-  <div>
-    <q-card inline>
+  <div class="row justify-center">
+    <q-card inline style="margin: 30px;">
       <q-card-title>
         Reset Password
       </q-card-title>
       <q-card-separator />
       <q-card-main>
-        <q-field
-          icon="mail"
-          label="Email"
-          helper="Enter your email address"
-        >
-          <q-input 
-            type="email"
-            v-model="email"
-          />
-        </q-field>
-        <q-btn 
-          icon="done"
-          color="primary"
-          @click="submit">
-          Reset Password 
-        </q-btn>
+        <div class="column xs-gutter">
+          <q-field
+            icon="mail"
+            label="Email"
+            helper="Enter your email address"
+          >
+            <q-input 
+              type="email"
+              v-model="email"
+            />
+          </q-field>
+          <br/>
+          <div class="row justify-around">
+            <q-btn 
+              icon="done"
+              color="primary"
+              @click="submit">
+              Reset
+            </q-btn>
+            <q-btn 
+              icon="cancel"
+              color="secondary"
+              @click="$router.push('/login')">
+              Cancel 
+            </q-btn>
+          </div>
+        </div>  
       </q-card-main>
     </q-card>
   </div>
