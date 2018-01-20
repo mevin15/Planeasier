@@ -21,33 +21,38 @@
     </q-toolbar>
 
     <div slot="left">
-      <div style="background-color: grey;">
-      <div id="avatar">
-      </div>
-      {{pseudo}}
-      <q-btn
-        flat
-      >
-        <q-icon name="settings" />
-      </q-btn>
+      <div class="bg-primary row justify-between items-stretch">
+        <div id="avatar" style="margin: 15px;">
+        </div>
+          <div class="self-center">
+          <p class="text-white text-bold light-paragraph">
+           {{pseudo}}
+          </p>
+          </div>
+          <q-btn
+            class="self-end text-white"
+            flat
+          >
+            <q-icon name="settings" />
+          </q-btn>
       </div>
       
       <q-list no-border link inset-delimiter>
         <q-item @click="$router.push('/home')">
-          <q-item-side icon="add" />
-          <q-item-main label="New Project"/>
+          <q-item-side class="text-primary" icon="add" />
+          <q-item-main class="text-tertiary light-paragraph" label="New Project"/>
         </q-item>
         <q-item @click="$router.push('/home')">
-          <q-item-side icon="work" />
-          <q-item-main label="My Projects"/>
+          <q-item-side class="text-primary" icon="work" />
+          <q-item-main class="text-tertiary light-paragraph" label="My Projects"/>
         </q-item>
         <q-item @click="$router.push('/home')">
-          <q-item-side icon="alarm" />
-          <q-item-main label="What are your plans for today ?"/>
+          <q-item-side class="text-primary" icon="alarm" />
+          <q-item-main class="text-tertiary light-paragraph" label="What are your plans for today ?"/>
         </q-item>
         <q-item @click="$router.push('/home')">
-          <q-item-side icon="dashboard" />
-          <q-item-main label="My Planning"/>
+          <q-item-side class="text-primary" icon="dashboard" />
+          <q-item-main class="text-tertiary light-paragraph" label="My Planning"/>
         </q-item>
       </q-list>
     </div>
