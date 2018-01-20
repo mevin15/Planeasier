@@ -6,7 +6,5 @@ npm-debug.log*
 cordova/platforms
 cordova/plugins
 .editorconfig
-.eslintignore
-.eslintrc.js
 .stylintrc
 templates/
